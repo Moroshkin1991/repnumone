@@ -3,7 +3,7 @@ import time
 
 
 class BasePage:
-    #base_url = 'https://demoqa.com/'
+    # base_url = 'https://demoqa.com/'
 
     def __init__(self, driver, base_url):
         self.driver = driver
@@ -12,12 +12,23 @@ class BasePage:
     def visit(self):
         return self.driver.get(self.base_url)
 
+    def back(self):
+        self.driver.back()
+
+    def forward(self):
+        self.forward()
+
+    def refresh(self):
+        self.refresh()
 
     def get_url(self):
         return self.driver.current_url
 
+    def get_title(self):
+        return self.driver.title
+
     def equal_url(self):
-        if self.get_url() == self.base_url:
+        if self.base_url == self.get_url():
             return True
         else:
             return False

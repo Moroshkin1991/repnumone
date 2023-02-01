@@ -1,5 +1,6 @@
 from pages.demoqa import Demoqa
 from pages.elements_page import ElementsPage
+import time
 
 
 def test_go_to_page_elements(browser):
