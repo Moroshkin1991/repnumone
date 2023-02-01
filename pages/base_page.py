@@ -3,7 +3,6 @@ import time
 
 
 class BasePage:
-    # base_url = 'https://demoqa.com/'
 
     def __init__(self, driver, base_url):
         self.driver = driver

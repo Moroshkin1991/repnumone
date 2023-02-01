@@ -28,3 +28,16 @@ def test_visible_accordian(browser):
     visible_acc.btn_first_question.click()
     time.sleep(2)
     assert visible_acc.big_text.not_visible()
+
+
+def test_visible_default_accordion(browser):
+    a = AccordionPage(browser)
+    a.visit()
+    assert a.big_text.visible()
+    a.btn_first_question.click()
+    browser.set_window_size(1000,300)
+    time.sleep(3)
+    assert a.big_text.not_visible()
+    browser.refresh()
+    browser.set_window_size(1000,1000)
+    assert a.big_text.visible()
