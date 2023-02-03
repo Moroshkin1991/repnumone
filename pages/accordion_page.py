@@ -9,4 +9,5 @@ class AccordionPage(BasePage):
 
         self.big_text = WebElement(driver, '#section1Content > p')
         self.btn_first_question = WebElement(driver, '#section1Heading')
+        self.not_elem = WebElement(driver, 'p>p')
 

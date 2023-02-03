@@ -42,3 +42,9 @@ class WebElement:
             return False
         except TimeoutException:
             return True
+
+    def send_keys(self, text: str):
+        self.find_element().send_keys(text)
+
+    def click_force(self):
+        self.driver.execute_script('arguments[0].click();', self.find_element())

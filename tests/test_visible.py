@@ -31,13 +31,19 @@ def test_visible_accordian(browser):
 
 
 def test_visible_default_accordion(browser):
-    a = AccordionPage(browser)
-    a.visit()
-    assert a.big_text.visible()
-    a.btn_first_question.click()
-    browser.set_window_size(1000,300)
+    accordion_page = AccordionPage(browser)
+    accordion_page.visit()
+    assert accordion_page.big_text.visible()
+    accordion_page.btn_first_question.click()
+    browser.set_window_size(1000, 300)
     time.sleep(3)
-    assert a.big_text.not_visible()
+    assert accordion_page.big_text.not_visible()
     browser.refresh()
-    browser.set_window_size(1000,1000)
-    assert a.big_text.visible()
+    browser.set_window_size(1000, 1000)
+    assert accordion_page.big_text.visible()
+
+
+def test_not_exist(browser):
+    accordion_page = AccordionPage(browser)
+    accordion_page.visit()
+    assert not accordion_page.not_elem.exist()
