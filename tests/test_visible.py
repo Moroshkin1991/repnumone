@@ -1,5 +1,4 @@
 from pages.elements_page import ElementsPage
-from pages.demoqa import Demoqa
 from pages.accordion_page import AccordionPage
 import time
 

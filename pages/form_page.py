@@ -15,3 +15,6 @@ class FormPage(BasePage):
         self.btn_submit = WebElement(driver, '#submit')
         self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
+        self.hobbies_sports = WebElement(driver, '#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(1) > label')
+        self.hobbies_music = WebElement(driver, '#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label')
+        self.current_addres = WebElement(driver, '#currentAddress')

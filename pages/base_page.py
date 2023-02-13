@@ -15,10 +15,10 @@ class BasePage:
         self.driver.back()
 
     def forward(self):
-        self.forward()
+        self.driver.forward()
 
     def refresh(self):
-        self.refresh()
+        self.driver.refresh()
 
     def get_url(self):
         return self.driver.current_url

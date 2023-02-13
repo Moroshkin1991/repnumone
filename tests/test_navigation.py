@@ -4,13 +4,15 @@ from pages.elements_page import ElementsPage
 
 
 def test_navigation(browser):
-    b = Demoqa(browser)
-    c = ElementsPage(browser)
-    b.visit()
-    b.btn_elements.click()
-    time.sleep(3)
-    c.refresh()
+    testNavigation = Demoqa(browser)
+    testNavigation2 = ElementsPage(browser)
+
+    testNavigation.visit()
+    testNavigation.btn_elements.click()
+    # time.sleep(3)
+    testNavigation2.refresh()
+    #time.sleep(2)
     browser.refresh()
     browser.back()
     browser.forward()
-    assert c.equal_url()
+    assert testNavigation2.equal_url()
